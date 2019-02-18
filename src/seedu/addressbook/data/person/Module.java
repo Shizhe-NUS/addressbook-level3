@@ -28,4 +28,25 @@ public class Module {
         return test.matches(MODULE_VALIDATION_REGEX);
     }
 
+    @Override
+    public String toString() {
+        return value;
+    }
+
+    public boolean equals(Object other) {
+        return other == this // short circuit if same object
+                || (other instanceof Module // instanceof handles nulls
+                && this.value.equals(((Module) other).value)); // state check
+    }
+
+    public int hashCode() {
+        return value.hashCode();
+    }
+
+    public boolean isPrivate() {
+        return isPrivate;
+    }
+
+
+
 }
