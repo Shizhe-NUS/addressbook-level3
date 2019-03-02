@@ -16,6 +16,7 @@ import seedu.addressbook.storage.StorageFile;
 import java.util.*;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.testng.TestNGAntTask.Mode.junit;
 import static seedu.addressbook.common.Messages.*;
 
 

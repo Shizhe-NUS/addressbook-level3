@@ -16,7 +16,7 @@ public class Person implements ReadOnlyPerson {
     private Phone phone;
     private Email email;
     private Address address;
-
+    private TimeTable timetable;
     private final Set<Tag> tags = new HashSet<>();
     /**
      * Assumption: Every field must be present and not null.
@@ -60,6 +60,9 @@ public class Person implements ReadOnlyPerson {
     public Set<Tag> getTags() {
         return new HashSet<>(tags);
     }
+
+    @Override
+    public TimeTable getTable() {return timetable;};
 
     /**
      * Replaces this person's tags with the tags in {@code replacement}.
